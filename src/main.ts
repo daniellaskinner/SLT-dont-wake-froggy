@@ -21,32 +21,27 @@ export class GameScene extends Phaser.Scene {
     }
 
     public create() {
-        this.square = this.add.rectangle(400, 400, 100, 100, 0x8FBC8F) as any;
-        this.physics.add.existing(this.square);
-
-        //  This simply creates a sprite using the frog image we loaded above and positions it at 200 x 200
         this.froggy = this.add.sprite(200, 200, 'froggy');
-        this.froggy.height = 100;
-        this.froggy.width = 100;
+        this.physics.add.existing(this.froggy);
     }
 
     public update() {
         const cursorKeys = this.input.keyboard.createCursorKeys();
 
         if (cursorKeys.up.isDown) {
-            this.square.body.setVelocityY(-500);
+            this.froggy.y -= 50;
         } else if (cursorKeys.down.isDown) {
-            this.square.body.setVelocityY(500);
+            this.froggy.y += 50;
         } else {
-            this.square.body.setVelocityY(0);
+            this.froggy.y += 0;
         }
 
         if (cursorKeys.right.isDown) {
-            this.square.body.setVelocityX(500);
+            this.froggy.x += 50;
         } else if (cursorKeys.left.isDown) {
-            this.square.body.setVelocityX(-500);
+            this.froggy.x -= 50;
         } else {
-            this.square.body.setVelocityX(0);
+            this.froggy.x += 0;
         }
     }
 }
