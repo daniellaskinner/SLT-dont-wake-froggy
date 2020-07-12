@@ -6,9 +6,15 @@
 - CSS
 - SASS
 - TYPESCRIPT
+- NODE.JS
 - PHASER NPM PACKAGE
+- WEBPACK MODULE BUNDLER
+- YARN PACKAGE MANAGER
 
-## To run on your machine run: npm install.
+## To run on your machine
+run ``yarn``
+
+run ``yarn dev`` to start to dev server
 
 ## How to play the game:
 ### Move froggy to the lilypad to reveal a word to practise, once you have said the word move to find the next lilypad.
